@@ -48,4 +48,5 @@ tight_summ_df3 <- tight_summ_df2[-c(1, 3, 4, 5, 8, 10, 12), ]
 tight_summ_df4 <- pivot_longer(tight_summ_df3, party_fam, values_to = "party_family")
 tight_summ_df5 <- subset(tight_summ_df4, select = -c(name) )
 
+# table (pending conversation with carlisle)
 table(tight_summ_df5$party_family, tight_summ_df5$average_milit_negative)
