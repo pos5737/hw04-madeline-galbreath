@@ -25,10 +25,10 @@ glimpse(summ_df2)
 summ_df3 <- summ_df2[-c(1:38, 200:383, 743:746, 859:949, 1141:1201), ]
 
 # plot median mentions of peace by party, stratified by party family
-ggplot(summ_df3, aes(x=party_fam, y=median_peace)) + geom_point()
+ggplot(summ_df3, aes(x=party_fam, y=median_peace)) + geom_point()  + xlab("Party Family") + ylab("Median Peace Mentions")
 
 # plot median mentions of peace by median negative mentions of military
-ggplot(summ_df3, aes(x=median_peace, y=median_milit_negative)) + geom_point()
+ggplot(summ_df3, aes(x=median_milit_negative, y=median_peace)) + geom_point() + xlab("Median Negative Military Mentions") + ylab("Median Peace Mentions")
 
 # use previous steps create a tighter data frame for table
 tight_summ_df <- group_by (df1, party_fam)
